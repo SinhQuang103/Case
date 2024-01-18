@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<marquee width="100%" behavior="alternate" bgcolor="red" font="Algerian" >
+    Tài Xỉu Online
+</marquee>
+<h3>Chọn trò chơi </h3>
+<label for="pick"></label><select name="Tài hay xỉu" id="pick">
+    <option value="0">Tài xỉu truyền thống</option>
+    <option value="1">Chẵn lẻ</option>
+    <option value="2">Cược 1 số</option>
+    <option value="3">Cược tổng điểm </option>
+</select>
+<button onclick="chotkeo()">Chốt</button>
+<br>
+<h3>Đặt Cược</h3>
+<select id="game"></select>
+<h3>Số tiền bạn muốn cược</h3>
+<label for="tiencuoc"></label><input type="Number" id="tiencuoc">
+<br>
+<h3> Bắt đầu </h3>
+<button onclick="batdau()">Enter</button>
+<h1 id="kq1"></h1>
+<br>
+<h1>Kết Quả</h1>
+<br>
+<h2 id="xx1"></h2>
+<h2 id="xx2"></h2>
+<h3 id="xx3"></h3>
+<script>
+
+    function chotkeo() {
+        let d = document.getElementById('pick').value
+        if (d == 0) {
+            document.getElementById('game').innerHTML = '<option value="4">Tài</option>'+'<option value="5">Xỉu</option>'+
+
+        }
+        if (d == 1) {
+            document.getElementById('game').innerHTML = '<option value="6">Chẵn</option>'+'<option value="7">Lẻ</option>'
+        }
+        if (d == 2) {
+            document.getElementById('game').innerHTML = '<input type="number" id="1so"/>'
+        }
+        if (d == 3) {
+            document.getElementById('game').innerHTML = '<input type="number" id="3so"/>'
+        }
+    }
+    function batdau() {
+        let x = Math.floor((Math.random() * 6) + 1);
+            if (x==1)
+                document.getElementById('xx1').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/one-310338_640.png" alt="" style="width: 50px"/>'
+            if (x==2)
+                document.getElementById('xx1').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/two-310337_640.png" alt="" style="width: 50px"/>'
+            if (x==3)
+                document.getElementById('xx1').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/three-310336_640.png" alt="" style="width: 50px"/>'
+            if (x==4)
+                document.getElementById('xx1').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/dice-310335_640.png" alt="" style="width: 50px"/>'
+            if (x==5)
+                document.getElementById('xx1').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/five-310334_640.png" alt="" style="width: 50px"/>'
+            if (x==6)
+                document.getElementById('xx1').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/dice-310333_640.png" alt="" style="width: 50px"/>'
+        let y = Math.floor((Math.random() * 6) + 1);
+            if (y==1)
+                document.getElementById('xx2').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/one-310338_640.png" alt="" style="width: 50px"/>'
+            if (y==2)
+                document.getElementById('xx2').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/two-310337_640.png" alt="" style="width: 50px"/>'
+            if (y==3)
+                document.getElementById('xx2').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/three-310336_640.png" alt="" style="width: 50px"/>'
+            if (y==4)
+                document.getElementById('xx2').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/dice-310335_640.png" alt="" style="width: 50px"/>'
+            if (y==5)
+                document.getElementById('xx2').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/five-310334_640.png" alt="" style="width: 50px"/>'
+            if (y==6)
+                document.getElementById('xx2').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/dice-310333_640.png" alt="" style="width: 50px"/>'
+        let z = Math.floor((Math.random() * 6) + 1);
+            if (z==1)
+                document.getElementById('xx3').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/one-310338_640.png" alt="" style="width: 50px"/>'
+            if (z==2)
+                document.getElementById('xx3').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/two-310337_640.png" alt="" style="width: 50px"/>'
+            if (z==3)
+                document.getElementById('xx3').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/three-310336_640.png" alt="" style="width: 50px"/>'
+            if (z==4)
+                document.getElementById('xx3').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/dice-310335_640.png" alt="" style="width: 50px"/>'
+            if (z==5)
+                document.getElementById('xx3').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/five-310334_640.png" alt="" style="width: 50px"/>'
+            if (z==6)
+                document.getElementById('xx3').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/dice-310333_640.png" alt="" style="width: 50px"/>'
+        let c = 0
+        let e = x+y+z
+        if (e%2==0) {
+            let f = document.getElementById('tiencuoc').value;
+                document.getElementById('kq1').innerHTML = "Bạn đã trúng: " + f * 2
+        }
+            else {
+                document.getElementById('kq1').innerHTML = "Ôi không mất sạch"
+        }
+    }
+
+</script>
+</body>
+</html>

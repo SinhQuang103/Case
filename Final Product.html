@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<marquee width="100%" behavior="alternate" bgcolor="red" font="Algerian">
+    Tài Xỉu Online
+</marquee>
+<h3>Tài khoản của bạn</h3>
+<h4 id="ngheo">Số Dư: 0 VND</h4>
+<input type="number" id="naptien">
+<button onclick="more()">Nạp tiền</button>
+
+<h3>Chọn trò chơi </h3>
+<label for="pick"></label><select name="Tài hay xỉu" id="pick">
+    <option value="0">Tài xỉu truyền thống</option>
+    <option value="1">Chẵn lẻ</option>
+    <option value="2">Cược 1 số</option>
+    <option value="3">Cược tổng điểm</option>
+</select>
+<button onclick="chotkeo()">Chốt</button>
+<br>
+<h3>Đặt Cược</h3>
+<div id="yes"></div>
+<h3>Số tiền bạn muốn cược</h3>
+<label for="tiencuoc"></label><input type="Number" id="tiencuoc">
+<br>
+<h3> Bắt đầu </h3>
+<button onclick="batdau()">Enter</button>
+<h3>Kết Quả</h3>
+<br>
+<h1 id="kq"></h1>
+<br>
+<h2 id="xx1"></h2>
+<h2 id="xx2"></h2>
+<h3 id="xx3"></h3>
+<h3 id="total"></h3>
+<script>
+    let g = 0;
+
+    function more() {
+        let h = +document.getElementById('naptien').value;
+        g = g + h;
+        alert("Gửi tiền vào stk: 0397099392 MB đi ban ei");
+        alert("cám ơn nha");
+        document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+        return g;
+    }
+
+    function chotkeo() {
+        let d = document.getElementById('pick').value
+        if (d == 0) {
+            document.getElementById('yes').innerHTML = '<select id="game">' + '<option value="4">Tài</option>' + '<option value="5">Xỉu</option>' + '</select>'
+        }
+        if (d == 1) {
+            document.getElementById('yes').innerHTML = '<select id="game">' + '<option value="6">Chẵn</option>' + '<option value="7">Lẻ</option>' + '</select>'
+        }
+        if (d == 2) {
+            document.getElementById('yes').innerHTML = '<input type="number" id="1so"/>'
+        }
+        if (d == 3) {
+            document.getElementById('yes').innerHTML = '<input type="number" id="3so"/>'
+        }
+    }
+
+    function batdau() {
+        if (g > 0) {
+            let b = document.getElementById('tiencuoc').value
+            let x = Math.floor((Math.random() * 6) + 1);
+            if (x == 1) {
+                document.getElementById('xx1').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/one-310338_640.png" alt="" style="width: 50px"/>'
+            }
+            if (x == 2) {
+                document.getElementById('xx1').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/two-310337_640.png" alt="" style="width: 50px"/>'
+            }
+            if (x == 3) {
+                document.getElementById('xx1').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/three-310336_640.png" alt="" style="width: 50px"/>'
+            }
+            if (x == 4) {
+                document.getElementById('xx1').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/dice-310335_640.png" alt="" style="width: 50px"/>'
+            }
+            if (x == 5) {
+                document.getElementById('xx1').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/five-310334_640.png" alt="" style="width: 50px"/>'
+            }
+            if (x == 6) {
+                document.getElementById('xx1').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/dice-310333_640.png" alt="" style="width: 50px"/>'
+            }
+            let y = Math.floor((Math.random() * 6) + 1);
+            if (y == 1) {
+                document.getElementById('xx2').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/one-310338_640.png" alt="" style="width: 50px"/>'
+            }
+            if (y == 2) {
+                document.getElementById('xx2').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/two-310337_640.png" alt="" style="width: 50px"/>'
+            }
+            if (y == 3) {
+                document.getElementById('xx2').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/three-310336_640.png" alt="" style="width: 50px"/>'
+            }
+            if (y == 4) {
+                document.getElementById('xx2').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/dice-310335_640.png" alt="" style="width: 50px"/>'
+            }
+            if (y == 5) {
+                document.getElementById('xx2').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/five-310334_640.png" alt="" style="width: 50px"/>'
+            }
+            if (y == 6) {
+                document.getElementById('xx2').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/dice-310333_640.png" alt="" style="width: 50px"/>'
+            }
+            let z = Math.floor((Math.random() * 6) + 1);
+            if (z == 1) {
+                document.getElementById('xx3').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/one-310338_640.png" alt="" style="width: 50px"/>'
+            }
+            if (z == 2) {
+                document.getElementById('xx3').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/two-310337_640.png" alt="" style="width: 50px"/>'
+            }
+            if (z == 3) {
+                document.getElementById('xx3').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/three-310336_640.png" alt="" style="width: 50px"/>'
+            }
+            if (z == 4) {
+                document.getElementById('xx3').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/dice-310335_640.png" alt="" style="width: 50px"/>'
+            }
+            if (z == 5) {
+                document.getElementById('xx3').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/five-310334_640.png" alt="" style="width: 50px"/>'
+            }
+            if (z == 6) {
+                document.getElementById('xx3').innerHTML = '<img src="https://cdn.pixabay.com/photo/2014/04/03/10/24/dice-310333_640.png" alt="" style="width: 50px"/>'
+            }
+            let c = document.getElementById('pick').value
+            let a = x + y + z
+            let e = document.getElementById('game').value
+            if (c == 1) {
+                if (e == 6) {
+                    if (a % 2 == 0) {
+                        document.getElementById('kq').innerHTML = 'Bạn đã trúng ' + b * 2
+                        g = g + (b * 2)
+                        document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                    } else {
+                        document.getElementById('kq').innerHTML = 'Bạn đã mất ' + b
+                        g = g - b
+                        document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                    }
+                    document.getElementById('total').innerHTML = 'Tổng Điểm = ' + a
+
+                }
+                if (e == 7) {
+                    if (a % 2 != 0) {
+                        document.getElementById('kq').innerHTML = 'Bạn đã trúng ' + b * 2
+                        g = g + (b * 2)
+                        document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                    } else {
+                        document.getElementById('kq').innerHTML = 'Bạn đã mất ' + b
+                        g = g - b
+                        document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                    }
+                    document.getElementById('total').innerHTML = 'Tổng Điểm = ' + a
+                }
+                if (c == 0) {
+                    if (e == 4) {
+                        if (a >= 4 && a <= 10) {
+                            document.getElementById('kq').innerHTML = 'Bạn đã trúng ' + b * 2
+                            g = g + (b * 2)
+                            document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                        } else {
+                            document.getElementById('kq').innerHTML = 'Bạn đã mất ' + b
+                            g = g - b
+                            document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                        }
+                        document.getElementById('total').innerHTML = 'Tổng Điểm = ' + a
+                    }
+                    if (e == 5) {
+                        if (a >= 11 && a <= 17) {
+                            document.getElementById('kq').innerHTML = 'Bạn đã trúng ' + b * 2
+                            g = g + (b * 2)
+                            document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                        } else {
+                            document.getElementById('kq').innerHTML = 'Bạn đã mất ' + b
+                            g = g - b
+                            document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                        }
+                        document.getElementById('total').innerHTML = 'Tổng Điểm = ' + a
+                    }
+                }
+                if (c == 2) {
+                    let f = document.getElementById('1so').value
+                    if (f == x && f == y && f == z) {
+                        document.getElementById('kq').innerHTML = 'Bạn đã trúng ' + b * 6
+                        g = g + (b * 6)
+                        document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                    }
+                    if (f == x && f == y && f != z) {
+                        document.getElementById('kq').innerHTML = 'Bạn đã trúng ' + b * 4
+                        g = g + (b * 4)
+                        document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                    }
+                    if (f == x && f != y && f != z) {
+                        document.getElementById('kq').innerHTML = 'Bạn đã trúng ' + b * 2
+                        g = g + (b * 2)
+                        document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                    }
+                    if (f != x && f != y && f != z) {
+                        document.getElementById('kq').innerHTML = 'Bạn đã mất ' + b
+                        g = g - b
+                        document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                    }
+                }
+                if (c == 3) {
+                    document.getElementById('total').innerHTML = 'Tổng Điểm = ' + a
+                    let g = document.getElementById('3so').value
+                    if (f == a) {
+                        document.getElementById('kq').innerHTML = 'Bạn đã trúng ' + b * 18
+                        g = g + (b * 18)
+                        document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                    } else {
+                        document.getElementById('kq').innerHTML = 'Bạn đã mất ' + b
+                        g = g - b
+                        document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                    }
+                }
+
+            }
+            if (c == 0) {
+                if (e == 4) {
+                    if (a >= 4 && a <= 10) {
+                        document.getElementById('kq').innerHTML = 'Bạn đã trúng ' + b * 2
+                        g = g + (b * 2)
+                        document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                    } else {
+                        document.getElementById('kq').innerHTML = 'Bạn đã mất ' + b
+                        g = g - b
+                        document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                    }
+                    document.getElementById('total').innerHTML = 'Tổng Điểm = ' + a
+                }
+                if (e == 5) {
+                    if (a >= 11 && a <= 17) {
+                        document.getElementById('kq').innerHTML = 'Bạn đã trúng ' + b * 2
+                        g = g + (b * 2)
+                        document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                    } else {
+                        document.getElementById('kq').innerHTML = 'Bạn đã mất ' + b
+                        g = g - b
+                        document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                    }
+                    document.getElementById('total').innerHTML = 'Tổng Điểm = ' + a
+                }
+            }
+            if (c == 2) {
+                let f = document.getElementById('1so').value
+                if (f == x && f == y && f == z) {
+                    document.getElementById('kq').innerHTML = 'Bạn đã trúng ' + b * 6
+                    g = g + (b * 6)
+                    document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                }
+                if (f == x && f == y && f != z) {
+                    document.getElementById('kq').innerHTML = 'Bạn đã trúng ' + b * 4
+                    g = g + (b * 4)
+                    document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                }
+                if (f == x && f != y && f != z) {
+                    document.getElementById('kq').innerHTML = 'Bạn đã trúng ' + b * 2
+                    g = g + (b * 2)
+                    document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                }
+                if (f != x && f != y && f != z) {
+                    document.getElementById('kq').innerHTML = 'Bạn đã mất ' + b
+                    g = g - b
+                    document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                }
+            }
+            if (c == 3) {
+                document.getElementById('total').innerHTML = 'Tổng Điểm = ' + a
+                let g = document.getElementById('3so').value
+                if (f == a) {
+                    document.getElementById('kq').innerHTML = 'Bạn đã trúng ' + b * 18
+                    g = g + (b * 18)
+                    document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                } else {
+                    document.getElementById('kq').innerHTML = 'Bạn đã mất ' + b
+                    g = g - b
+                    document.getElementById('ngheo').innerHTML = 'Số Dư: ' + g + ' VND';
+                }
+            }
+        }
+        else{
+            alert('cút ra ngoài nghèo mà đòi chơi')
+        }
+    }
+
+</script>
+</body>
+</html>
